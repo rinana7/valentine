@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="src/style.css">
+        <title>Valentine</title> <!--when the title clicked, make a button appear-->
+    </head>
+    <body>
+        <h1 id="title">チョコ欲しい？</h1>
+
+        <div class="buttons">
+            <button class='click1'>いらない</button>
+            <button class='click2'>まあ、、、いいけど</button>
+        </div>
+
+
+        <!--first option -->
+        <div id="first" style="display: none;">
+            <h2>え？本当に？</h2>
+            <button class='option'>いらない</button> <!--only option -->
+            <div id='option1' style="display: none;">
+                <h2>え、、、？</h2> <!--BAD ENDING -->
+            </div>
+        </div>
+
+        <!--second option -->
+        <div id="second" style="display: none;">
+            <h2>はあ？何のその態度。ありえないんですけど</h2> <!--BAD ENDING -->
+        </div>
+
+        <!--third option (small on left corner) -->
+        <button class='click3'>はい！</button>
+        <div id="third" style="display: none;">
+            <h2>まじ？やった〜✨</h2><!--NORMAL ENDING -->
+        </div>
+
+        <!--fourth option (only when the title clicked) -->
+        <div id="box" style="display: none;">
+            <button class='click4'>喜んで！むしろありがとうございます！！</button>
+            <div id="fourth" style="display: none;">
+                <h2>本当？ありがとう！</h2> <!--HAPPY ENDING? -->
+                <!--add glitch and force to reload page -->
+            </div>
+        </div>
+        <script src="src/script.js"></script>
+    </body>
+</html>
