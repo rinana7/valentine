@@ -33,11 +33,11 @@ title.addEventListener("click", function () {
 // Click1
 document.querySelector(".click1").addEventListener("click", function () {
     document.getElementById("first").style.display = "block";
-    showEnding("first", "bad");
 });
 
 document.querySelector(".option").addEventListener("click", function () {
     document.getElementById("option1").style.display = "block";
+    showEnding("first", "sad");
 })
 
 
@@ -45,21 +45,6 @@ document.querySelector(".option").addEventListener("click", function () {
 document.querySelector(".click2").addEventListener("click", function () {
     document.getElementById("second").style.display = "block";
     showEnding("second", "bad");
-});
-
-
-// Click3
-document.querySelector(".click3").addEventListener("click", function () {
-    document.getElementById("third").style.display = "block";
-    showEnding("third", "normal");
-});
-
-
-// Click4 (inside hidden box)
-document.querySelector(".click4").addEventListener("click", function () {
-    document.getElementById("fourth").style.display = "block";
-    showEnding("fourth", "happy");
-
     setTimeout(() => {
         document.body.style.opacity = "0";
     }, 2000);
@@ -67,5 +52,19 @@ document.querySelector(".click4").addEventListener("click", function () {
     setTimeout(() => {
         location.reload();
     }, 3500);
+});
+
+
+// Click3
+document.querySelector(".click3").addEventListener("click", function () {
+    document.getElementById("third").style.display = "block";
+    showEnding("third", "happy");
+});
+
+
+// Click4 (inside hidden box)
+document.querySelector(".click4").addEventListener("click", function () {
+    document.getElementById("fourth").style.display = "block";
+    showEnding("fourth", "happy");
 });
 

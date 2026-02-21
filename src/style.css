@@ -9,22 +9,23 @@ body{
     display: flex;
     justify-content: center;   /* horizontal center */
     align-items: center;       /* vertical center */
+    background-image: url("../images/original.jpg");
 }
 
 body.bad {
-    /* background-image: url("../images/bad.jpg"); */
+    background-image: url("../images/bad.jpg");
 }
 
 body.normal {
-    /* background-image: url("../images/bad.jpg"); */
+    background-image: url("../images/original.jpg");
 }
 
 body.happy {
-    /* background-image: url("../images/bad.jpg"); */
+    background-image: url("../images/happy.jpg");
 }
 
-body.secret {
-    /* background-image: url("../images/bad.jpg"); */
+body.sad {
+    background-image: url("../images/sad.jpg");
 }
 
 h1{
@@ -61,12 +62,14 @@ button{
     background-color: lightblue;
     color: white;
     cursor: pointer;
+
 }
 
 button:hover{
-    background-color: darkgray;
+    background-color: lightgray;
     color: white;
     cursor: pointer;
+    border: none;
 }
 
 .click3{
