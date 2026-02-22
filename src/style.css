@@ -7,8 +7,7 @@ body{
     margin: 0;
     height: 100vh;
     display: flex;
-    justify-content: center;   /* horizontal center */
-    align-items: center;       /* vertical center */
+    justify-content: center;
     background-image: url("../images/original.jpg");
 }
 
@@ -62,7 +61,6 @@ button{
     background-color: lightblue;
     color: white;
     cursor: pointer;
-
 }
 
 button:hover{
@@ -82,4 +80,14 @@ button:hover{
     width: 50px;
     height: 30px;
 }
+
+.transparentBox {
+    background-color: gray; /* A solid white background color */
+    opacity: 0.4; /* Makes the box and ALL its contents 40% opaque (60% transparent) */
+    padding: 20px;
+    width: 1000px;
+    height: 50px;
+    text-align: center;
+}
+
 
