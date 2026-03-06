@@ -102,3 +102,21 @@ h1{
     left:20px;
     cursor:pointer;
 }
+
+#resetBtn {
+    position: absolute;
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 8px 18px;
+    font-size: 14px;
+    color: #555; /* soft gray text */
+    border-radius: 12px; /* gentle rounding */
+    cursor: pointer;
+    transition: background-color 0.2s, transform 0.1s;
+}
+
+#resetBtn:hover {
+    background-color: #ffc0d4; /* slightly darker on hover */
+    transform: translateX(-50%) scale(1.02); /* tiny pop effect */
+}
