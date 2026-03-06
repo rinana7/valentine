@@ -100,3 +100,9 @@ secret.onclick = () => {
     document.body.className = "happy"
 
 }
+
+const resetBtn = document.getElementById("resetBtn");
+
+resetBtn.addEventListener("click", () => {
+    location.reload(); // Reloads the page
+});
