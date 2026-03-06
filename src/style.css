@@ -1,3 +1,7 @@
+*{
+    box-sizing: border-box;
+}
+
 body{
     font-family: Arial, Helvetica, sans-serif;
     background-color: beige;
@@ -6,8 +10,6 @@ body{
     transition: background-image 0.5s ease-in-out;
     margin: 0;
     height: 100vh;
-    display: flex;
-    justify-content: center;
     background-image: url("../images/original.jpg");
 }
 
@@ -49,25 +51,31 @@ h2{
 
 .buttons {
     display: flex;
-    gap: 20px; /* space between buttons */
+    justify-content: center;
+    gap: 20px;
+    margin-top: 20px;
 
 }
 
 button{
-    align-items: center;
     font-family: sans-serif;
     width: 200px;
     height: 50px;
-    background-color: lightblue;
-    color: white;
+
+    background: rgba(255,255,255,0.8);
+    border: none;
+    border-radius: 10px;
+
+    font-size: 16px;
+    color: black;
+
     cursor: pointer;
+    transition: all 0.2s ease;
 }
 
 button:hover{
-    background-color: lightgray;
-    color: white;
-    cursor: pointer;
-    border: none;
+    background: rgba(255,255,255,1);
+    transform: scale(1.05);
 }
 
 .click3{
@@ -81,13 +89,22 @@ button:hover{
     height: 30px;
 }
 
-.transparentBox {
-    background-color: gray; /* A solid white background color */
-    opacity: 0.4; /* Makes the box and ALL its contents 40% opaque (60% transparent) */
-    padding: 20px;
-    width: 1000px;
-    height: 50px;
-    text-align: center;
-}
 
+.dialogueBox{
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+
+    width: 80%;
+    height: 140px;
+
+    background: rgba(0,0,0,0.55);
+    color: white;
+
+    border-radius: 15px 15px 0 0;
+    padding: 25px;
+
+    font-size: 22px;
+}
 
