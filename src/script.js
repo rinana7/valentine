@@ -21,50 +21,82 @@ function disableAllButtons() {
     });
 }
 
-// Title → show hidden special option
-const title = document.getElementById("title");
-const box = document.getElementById("box");
+const dialogue = document.getElementById("dialogue")
 
-title.addEventListener("click", function () {
-    box.style.display = "block";
-});
+function typeWriter(text, speed = 35){
 
+    dialogue.textContent = ""
+    let i = 0
 
-// Click1
-document.querySelector(".click1").addEventListener("click", function () {
-    document.getElementById("first").style.display = "block";
-});
+    function typing(){
+        if(i < text.length){
+            dialogue.textContent += text.charAt(i)
+            i++
+            setTimeout(typing, speed)
+        }
+    }
 
-document.querySelector(".option").addEventListener("click", function () {
-    document.getElementById("option1").style.display = "block";
-    showEnding("first", "sad");
-})
+    typing()
+}
 
+typeWriter("チョコ欲しい？")
 
-// Click2
-document.querySelector(".click2").addEventListener("click", function () {
-    document.getElementById("second").style.display = "block";
-    showEnding("second", "bad");
-    setTimeout(() => {
-        document.body.style.opacity = "0";
-    }, 2000);
+const choice1 = document.getElementById("choice1")
+const choice2 = document.getElementById("choice2")
 
-    setTimeout(() => {
-        location.reload();
-    }, 3500);
-});
+choice1.onclick = () => {
 
+    typeWriter("え？本当に？")
 
-// Click3
-document.querySelector(".click3").addEventListener("click", function () {
-    document.getElementById("third").style.display = "block";
-    showEnding("third", "happy");
-});
+    document.querySelector(".choices").innerHTML =
+        `<button id="noAgain">いらない</button>`
 
+    document.getElementById("noAgain").onclick = () => {
 
-// Click4 (inside hidden box)
-document.querySelector(".click4").addEventListener("click", function () {
-    document.getElementById("fourth").style.display = "block";
-    showEnding("fourth", "happy");
-});
+        typeWriter("え、、、？")
 
+        document.body.className = "sad"
+
+    }
+}
+
+choice2.onclick = () => {
+
+    typeWriter("はあ？何その態度。")
+
+    document.body.className = "bad"
+
+    setTimeout(()=>{
+        document.body.style.opacity="0"
+    },2000)
+
+    setTimeout(()=>{
+        location.reload()
+    },3500)
+
+}
+
+document.getElementById("quickYes").onclick = () => {
+
+    typeWriter("まじ？✨")
+
+    document.body.className = "happy"
+
+}
+
+const title = document.getElementById("title")
+const secret = document.getElementById("secretYes")
+
+title.onclick = () => {
+
+    secret.style.display = "block"
+
+}
+
+secret.onclick = () => {
+
+    typeWriter("本当？ありがとう！")
+
+    document.body.className = "happy"
+
+}
